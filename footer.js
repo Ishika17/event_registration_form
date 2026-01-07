@@ -1,6 +1,6 @@
-// Footer JavaScript
+
 document.addEventListener("DOMContentLoaded", function () {
-    // Newsletter Form
+
     const newsletterForm = document.getElementById("newsletterForm");
     const newsletterMessage = document.getElementById("newsletterMessage");
 
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("newsletterConsent");
             const email = emailInput.value.trim();
 
-            // Validation
+    
             if (!email) {
                 showNewsletterMessage(
                     "Please enter your email address",
@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-            // Simulate API call
             showNewsletterMessage("Subscribing...", "info");
 
             setTimeout(() => {
@@ -48,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 );
                 newsletterForm.reset();
 
-                // Clear message after 5 seconds
                 setTimeout(() => {
                     newsletterMessage.style.display = "none";
                 }, 5000);
@@ -56,11 +54,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Back to Top Button
+
     const backToTopBtn = document.getElementById("backToTop");
 
     if (backToTopBtn) {
-        // Show/hide button based on scroll position
+      
         window.addEventListener("scroll", function () {
             if (window.pageYOffset > 300) {
                 backToTopBtn.style.opacity = "1";
@@ -73,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // Smooth scroll to top
+ 
         backToTopBtn.addEventListener("click", function () {
             window.scrollTo({
                 top: 0,
@@ -81,22 +79,22 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
 
-        // Initial state
+    
         backToTopBtn.style.transition = "all 0.3s ease";
         backToTopBtn.style.opacity = "0";
         backToTopBtn.style.visibility = "hidden";
         backToTopBtn.style.transform = "translateY(10px)";
     }
 
-    // Language Selector
+ 
     const languageSelect = document.querySelector(".language-selector select");
 
     if (languageSelect) {
         languageSelect.addEventListener("change", function () {
-            // In a real application, you would change the language here
+       
             console.log("Language changed to:", this.value);
 
-            // Show a confirmation message
+           
             const message = document.createElement("div");
             message.textContent = "Language preference saved";
             message.style.cssText = `
@@ -119,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Helper Functions
+
     function showNewsletterMessage(text, type) {
         newsletterMessage.textContent = text;
         newsletterMessage.className = "newsletter-message " + type;
@@ -131,7 +129,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return emailRegex.test(email);
     }
 
-    // Add animation to social links on hover
     const socialLinks = document.querySelectorAll(".social-link");
 
     socialLinks.forEach((link) => {

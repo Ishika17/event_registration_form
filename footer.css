@@ -4,7 +4,6 @@ main {
     text-align: center;
 }
 
-/* Footer Styles */
 footer {
     background-color: #141414;
     color: white;
@@ -22,7 +21,6 @@ footer .container {
     max-width: 1200px;
 }
 
-/* Animated Text Strip */
 #animated-text-strip {
     display: flex;
     flex-flow: row nowrap;
@@ -60,7 +58,7 @@ footer .container {
     }
 }
 
-/* Footer Content */
+
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -87,7 +85,6 @@ footer .container {
     color: #ccc;
 }
 
-/* Emblem Container */
 .emblem-container {
     display: flex;
     justify-content: center;
@@ -113,7 +110,7 @@ footer .container {
     transform: scale(1.05);
 }
 
-/* Arrow Background */
+
 .path {
     position: absolute;
     top: 50%;
@@ -143,7 +140,7 @@ footer .container {
     fill: none;
 }
 
-/* SVG Text Circle */
+
 .link__svg {
     position: relative;
     z-index: 2;
@@ -177,14 +174,13 @@ footer .container {
     }
 }
 
-/* Circle Border */
+
 .circle-border {
     fill: none;
     stroke: #fdf0d5;
     stroke-width: 2;
 }
 
-/* Footer Bottom */
 .footer-bottom {
     text-align: center;
     padding: 10px 0;
@@ -193,7 +189,7 @@ footer .container {
     font-size: 0.9rem;
 }
 
-/* Newsletter Section */
+
 .newsletter-title {
     color: #ffffff;
     font-size: 20px;
@@ -302,8 +298,6 @@ footer .container {
 .privacy-notice a:hover {
     text-decoration: underline;
 }
-
-/* Updated CSS for the newsletter section */
 .newsletter-section {
     position: relative;
     width: 400px;
@@ -334,7 +328,7 @@ footer .container {
     }
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;

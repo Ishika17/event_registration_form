@@ -93,7 +93,7 @@ header .logo h1 {
     align-items: center;
 }
 
-/* Navigation Container */
+
 .navigation {
     position: relative;
     overflow: hidden;
@@ -102,7 +102,6 @@ header .logo h1 {
     min-height: 57px;
 }
 
-/* Common Nav Styles */
 .navigation nav {
     display: flex;
     align-items: center;
@@ -137,7 +136,7 @@ header .logo h1 {
     background-position: 0 0;
 }
 
-/* Main Navigation */
+
 .main-nav {
     transition: transform 0.4s ease;
 }
@@ -146,7 +145,7 @@ header .logo h1 {
     transform: translateX(-100%);
 }
 
-/* User Navigation */
+
 .user-nav {
     position: absolute;
     top: 50%;
@@ -161,7 +160,7 @@ header .logo h1 {
     transform: translateX(0) translateY(-50%);
 }
 
-/* User Image Styles */
+
 .user img,
 .user-back img {
     width: 40px;
@@ -176,7 +175,6 @@ header .logo h1 {
     transform: scale(1.1);
 }
 
-/* Hamburger Menu Styles */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -211,8 +209,6 @@ header .logo h1 {
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(8px, -8px);
 }
-
-/* Mobile Responsive */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
