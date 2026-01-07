@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Outward";
+    src: url("./fonts/outward-block.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Risque";
+    src: url("./fonts/Risque-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./fonts/Roboto-VariableFont_wdth\,wght.ttf") format("truetype");
+}
+
+body {
+    font-family: "Roboto";
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.page-wrapper {
+    /* height: 1000px; */
+    width: 100%;
+    background: url("./assets/band.jpg") center / cover no-repeat;
+}
+
+header {
+    background-color: rgba(26, 21, 21, 0.56);
+    padding: 20px 0px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header .logo h1 {
+    font-family: "Outward", system-ui, sans-serif;
+    font-size: 90px;
+    font-weight: 100;
+    margin-bottom: 0;
+    width: 150px;
+}
+
+.logo-text {
+    line-height: 0.9;
+}
+
+.logo-text {
+    font-family: "Outward", system-ui, sans-serif;
+    letter-spacing: 2px;
+}
+
+.logo-text .event {
+    color: #ffffff;
+}
+
+.logo-text .club {
+    color: #c1121f;
+}
+
+.logo-text::after {
+    margin-top: 0px;
+}
+
+.logo-underline {
+    display: inline-block;
+    width: 140px;
+    height: 5px;
+    background: #ffffff;
+    border-radius: 999px;
+    transform: scaleX(0.571);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.logo h1:hover ~ .logo-underline {
+    transform: scaleX(1);
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation Container */
+.navigation {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    min-height: 57px;
+}
+
+/* Common Nav Styles */
+.navigation nav {
+    display: flex;
+    align-items: center;
+}
+
+.navigation nav a {
+    padding: 0 12px;
+    margin: 0 12px;
+    text-decoration: none;
+}
+
+.navigation nav a span {
+    color: white;
+    font-family: "Roboto";
+    font-size: 20px;
+    background: linear-gradient(
+        to right,
+        #c1121f 0%,
+        #c1121f 50%,
+        white 50%,
+        white 100%
+    );
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 0.4s ease;
+}
+
+.navigation nav a span:hover {
+    background-position: 0 0;
+}
+
+/* Main Navigation */
+.main-nav {
+    transition: transform 0.4s ease;
+}
+
+.main-nav.slide-out {
+    transform: translateX(-100%);
+}
+
+/* User Navigation */
+.user-nav {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    transform: translateX(100%) translateY(-50%);
+    transition: transform 0.4s ease;
+}
+
+.user-nav.slide-in {
+    transform: translateX(0) translateY(-50%);
+}
+
+/* User Image Styles */
+.user img,
+.user-back img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.user:hover img,
+.user-back:hover img {
+    transform: scale(1.1);
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1000;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background: #ffffff;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.hamburger.active span {
+    background: #c1121f;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .navigation {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: rgba(26, 21, 21, 0.98);
+        transition: right 0.3s ease;
+        z-index: 999;
+    }
+
+    .navigation.active {
+        right: 0;
+    }
+
+    .navigation nav {
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .navigation nav a {
+        margin: 0;
+        padding: 15px 0;
+    }
+
+    .navigation nav a span {
+        font-size: 24px;
+    }
+
+    .user-nav {
+        position: static;
+        transform: translateX(100%);
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .user-nav.slide-in {
+        transform: translateX(0);
+    }
+
+    .main-nav.slide-out {
+        display: none;
+    }
+
+    header .logo h1 {
+        font-size: 60px;
+    }
+
+    .logo-underline {
+        width: 100px;
+        height: 4px;
+        transform: scaleX(0.771);
+    }
+}

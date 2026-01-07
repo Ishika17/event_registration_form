@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Event Register Form</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="./header.css" />
+        <link rel="stylesheet" href="./form.css" />
+        <link rel="stylesheet" href="./footer.css" />
+    </head>
+    <body>
+        <div class="page-wrapper">
+            <header>
+                <div class="container">
+                    <div class="header-section">
+                        <div class="logo">
+                            <a href="#">
+                                <h1 class="logo-text">
+                                    <span class="event">Event</span
+                                    ><span class="club">Club</span>
+                                </h1>
+                                <span class="logo-underline"></span>
+                            </a>
+                        </div>
+
+                        <!-- Hamburger Menu Button -->
+                        <div style="display: flex; align-items: center">
+                            <button class="hamburger" id="hamburger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+
+                        <div class="navigation" id="navigation">
+                            <!-- Main Navigation -->
+                            <nav class="main-nav" id="mainNav">
+                                <a href="#">
+                                    <span>Home</span>
+                                </a>
+                                <a href="#">
+                                    <span>Events</span>
+                                </a>
+                                <a href="#">
+                                    <span>Registration</span>
+                                </a>
+                                <a href="#">
+                                    <span>About</span>
+                                </a>
+                                <a href="#" class="user" id="userToggle">
+                                    <img src="./assets/user.jpg" alt="User" />
+                                </a>
+                            </nav>
+
+                            <!-- User Menu (Hidden by default) -->
+                            <nav class="user-nav" id="userNav">
+                                <a href="#" class="user-back" id="userBack">
+                                    <img src="./assets/user.jpg" alt="User" />
+                                </a>
+                                <a href="#">
+                                    <span>Profile</span>
+                                </a>
+                                <a href="#">
+                                    <span>Events</span>
+                                </a>
+                                <a href="#">
+                                    <span>Settings</span>
+                                </a>
+                                <a href="#">
+                                    <span>Logout</span>
+                                </a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <form class="event-registration-form" id="registrationForm">
+                    <div class="form-header">
+                        <i class="fas fa-calendar-check header-icon"></i>
+                        <h2 class="form-title">EVENT REGISTRATION</h2>
+                        <p class="form-subtitle">
+                            Secure your spot at our upcoming event
+                        </p>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label for="fullName">
+                                <i class="fas fa-id-card"></i> Full Name
+                            </label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-user-circle input-icon"></i>
+                                <input
+                                    type="text"
+                                    id="fullName"
+                                    name="fullName"
+                                    placeholder="Enter your full name"
+                                    required
+                                />
+                            </div>
+                            <div class="input-hint">
+                                As it appears on your ID
+                            </div>
+                        </div>
+
+                        <div class="form-group half-width">
+                            <label for="mobile">
+                                <i class="fas fa-mobile-alt"></i> Mobile Number
+                            </label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-phone-alt input-icon"></i>
+                                <input
+                                    type="tel"
+                                    id="mobile"
+                                    name="mobile"
+                                    placeholder="+91 98765 43210"
+                                    required
+                                />
+                            </div>
+                            <div class="input-hint">
+                                For event updates and confirmation
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label for="email">
+                                <i class="fas fa-at"></i> Email Address
+                            </label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-envelope input-icon"></i>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="your.email@example.com"
+                                    required
+                                />
+                            </div>
+                            <div class="input-hint">
+                                Confirmation will be sent here
+                            </div>
+                        </div>
+
+                        <div class="form-group half-width">
+                            <label for="registrationType">
+                                <i class="fas fa-ticket"></i> Registration Type
+                            </label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-tags input-icon"></i>
+                                <select
+                                    id="registrationType"
+                                    name="registrationType"
+                                    required
+                                >
+                                    <option value="" disabled selected>
+                                        Choose your pass type
+                                    </option>
+                                    <option value="general">
+                                        <i class="fas fa-user"></i> Attendee
+                                    </option>
+                                    <option value="vip">
+                                        <i class="fas fa-crown"></i> Speaker
+                                    </option>
+                                    <option value="earlybird">
+                                        <i class="fas fa-bolt"></i> Guest
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="input-hint">
+                                Select your preferred pass
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="eventType">
+                            <i class="fas fa-calendar-star"></i> Event Type
+                        </label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-calendar-days input-icon"></i>
+                            <select id="eventType" name="eventType" required>
+                                <option value="" disabled selected>
+                                    Select the type of event
+                                </option>
+                                <option value="conference">
+                                    <i class="fas fa-microphone"></i> Conference
+                                </option>
+                                <option value="workshop">
+                                    <i class="fas fa-tools"></i> Workshop
+                                </option>
+                                <option value="seminar">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                    Seminar
+                                </option>
+                                <option value="networking">
+                                    <i class="fas fa-handshake"></i> Networking
+                                    Event
+                                </option>
+                                <option value="concert">
+                                    <i class="fas fa-music"></i> Concert
+                                </option>
+                                <option value="sports">
+                                    <i class="fas fa-running"></i> Sports Event
+                                </option>
+                            </select>
+                        </div>
+                        <div class="input-hint">
+                            Choose the category that matches your event
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Register Now</span>
+                            <i class="fas fa-arrow-right submit-arrow"></i>
+                        </button>
+
+                        <div class="secure-notice">
+                            <i class="fas fa-lock"></i>
+                            <span
+                                >Your information is secure and encrypted</span
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-footer">
+                        <p>
+                            By registering, you agree to our
+                            <a href="#"
+                                ><i class="fas fa-file-contract"></i> Terms of
+                                Service</a
+                            >
+                            and
+                            <a href="#"
+                                ><i class="fas fa-shield-alt"></i> Privacy
+                                Policy</a
+                            >
+                        </p>
+                        <div class="contact-support">
+                            <i class="fas fa-headset"></i>
+                            Need help? <a href="#">Contact Support</a>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Success Message (hidden by default) -->
+                <div class="success-message" id="successMessage">
+                    <div class="success-content">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Registration Successful!</h3>
+                        <p>
+                            <i class="fas fa-envelope-open-text"></i>
+                            A confirmation email has been sent to your inbox.
+                        </p>
+                        <p class="success-details">
+                            <i class="fas fa-calendar-check"></i>
+                            Please check your email for event details and QR
+                            code.
+                        </p>
+                        <button class="close-success" id="closeSuccess">
+                            <i class="fas fa-check"></i> Got it!
+                        </button>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <!-- Footer HTML -->
+        <footer>
+            <div class="border">
+                <div id="animated-text-strip">
+                    <div class="marquee">
+                        <span>BOOK YOUR EVENT</span>
+                        <i class="fas fa-champagne-glasses"></i>
+                        <span>CELEBRATE IN STYLE</span>
+                        <i class="fas fa-music"></i>
+                        <span>UNFORGETTABLE MOMENTS</span>
+                        <i class="fas fa-gift"></i>
+                        <span>PARTY TIME</span>
+                        <i class="fas fa-star"></i>
+                        <span>BOOK YOUR EVENT</span>
+                        <i class="fas fa-champagne-glasses"></i>
+                        <span>CELEBRATE IN STYLE</span>
+                        <i class="fas fa-music"></i>
+                        <span>UNFORGETTABLE MOMENTS</span>
+                        <i class="fas fa-gift"></i>
+                        <span>PARTY TIME</span>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="marquee" aria-hidden="true">
+                        <span>BOOK YOUR EVENT</span>
+                        <i class="fas fa-champagne-glasses"></i>
+                        <span>CELEBRATE IN STYLE</span>
+                        <i class="fas fa-music"></i>
+                        <span>UNFORGETTABLE MOMENTS</span>
+                        <i class="fas fa-gift"></i>
+                        <span>PARTY TIME</span>
+                        <i class="fas fa-star"></i>
+                        <span>BOOK YOUR EVENT</span>
+                        <i class="fas fa-champagne-glasses"></i>
+                        <span>CELEBRATE IN STYLE</span>
+                        <i class="fas fa-music"></i>
+                        <span>UNFORGETTABLE MOMENTS</span>
+                        <i class="fas fa-gift"></i>
+                        <span>PARTY TIME</span>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-newsletter">
+                        <h3 class="newsletter-title">Stay Updated</h3>
+                        <p class="newsletter-text">
+                            Get the latest event announcements and exclusive
+                            offers.
+                        </p>
+                        <form class="newsletter-form" id="newsletterForm">
+                            <div class="input-group">
+                                <input
+                                    type="email"
+                                    placeholder="Your email address"
+                                    aria-label="Email address for newsletter"
+                                    required
+                                />
+                                <button
+                                    type="submit"
+                                    class="newsletter-btn"
+                                    aria-label="Subscribe to newsletter"
+                                >
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                            <div
+                                class="newsletter-message"
+                                id="newsletterMessage"
+                            ></div>
+                            <div class="privacy-notice">
+                                <input
+                                    type="checkbox"
+                                    id="newsletterConsent"
+                                    required
+                                />
+                                <label for="newsletterConsent">
+                                    I agree to receive emails and accept the
+                                    <a href="#">privacy policy</a>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="emblem-container">
+                        <div class="emblem">
+                            <a href="#" class="link">
+                                <!-- Arrow Background -->
+                                <div class="path">
+                                    <img
+                                        src="./assets/Poly Line.svg"
+                                        alt="Arrow"
+                                    />
+                                </div>
+                                <!-- Rotating Text SVG -->
+                                <svg
+                                    viewBox="0 0 200 200"
+                                    width="200"
+                                    height="200"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="link__svg"
+                                    aria-labelledby="link1-title link1-desc"
+                                >
+                                    <title id="link1-title">GET STARTED</title>
+                                    <desc id="link1-desc">
+                                        A rotating link with text placed around
+                                        a circle with an arrow inside
+                                    </desc>
+
+                                    <!-- Path for text to follow -->
+                                    <path
+                                        id="link-circle"
+                                        class="link__path"
+                                        d="M 20, 100 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"
+                                    />
+
+                                    <!-- Rotating text -->
+                                    <text class="link__text">
+                                        <textPath
+                                            href="#link-circle"
+                                            startOffset="0%"
+                                        >
+                                            GET STARTED • GET STARTED • GET
+                                            STARTED •
+                                        </textPath>
+                                    </text>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Your Company. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="header.js"></script>
+        <script src="form.js"></script>
+        <script src="footer.js"></script>
+    </body>
+</html>
