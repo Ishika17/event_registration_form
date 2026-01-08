@@ -1,5 +1,5 @@
 
-document.addEventListener("DOMContentLoaded", function () {
+
 
     const newsletterForm = document.getElementById("newsletterForm");
     const newsletterMessage = document.getElementById("newsletterMessage");
@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             showNewsletterMessage("Subscribing...", "info");
 
-            
             setTimeout(() => {
                 showNewsletterMessage(
                     "Successfully subscribed! Check your email for confirmation.",
@@ -64,4 +63,4 @@ document.addEventListener("DOMContentLoaded", function () {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }
-});
+

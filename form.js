@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+
     const form = document.getElementById("registrationForm");
     const successMessage = document.getElementById("successMessage");
     const closeSuccessBtn = document.getElementById("closeSuccess");
@@ -272,7 +272,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fullNameInput.focus();
     }
 
-    
+
 
     function simulateSubmission(formData) {
         const submitBtn = form.querySelector(".submit-btn");
@@ -312,4 +312,3 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
         document.head.appendChild(style);
     }
-});
