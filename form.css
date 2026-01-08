@@ -179,6 +179,11 @@ main {
     padding-right: 60px;
 }
 
+.input-wrapper select option {
+    background-color: #0f0f0f;
+    color: #ffffff;
+}
+
 .input-hint {
     color: rgba(255, 255, 255, 0.6);
     font-size: 12px;

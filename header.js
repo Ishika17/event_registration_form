@@ -13,14 +13,12 @@ hamburger.addEventListener("click", () => {
 
 
 userToggle.addEventListener("click", (e) => {
-    e.preventDefault();
     mainNav.classList.add("slide-out");
     userNav.classList.add("slide-in");
 });
 
 
 userBack.addEventListener("click", (e) => {
-    e.preventDefault();
     mainNav.classList.remove("slide-out");
     userNav.classList.remove("slide-in");
 });
