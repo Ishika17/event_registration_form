@@ -1,4 +1,3 @@
-
     const form = document.getElementById("registrationForm");
     const successMessage = document.getElementById("successMessage");
     const closeSuccessBtn = document.getElementById("closeSuccess");

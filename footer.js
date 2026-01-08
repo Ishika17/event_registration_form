@@ -1,6 +1,3 @@
-
-
-
     const newsletterForm = document.getElementById("newsletterForm");
     const newsletterMessage = document.getElementById("newsletterMessage");
 
