@@ -272,6 +272,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fullNameInput.focus();
     }
 
+    
 
     function simulateSubmission(formData) {
         const submitBtn = form.querySelector(".submit-btn");

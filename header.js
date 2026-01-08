@@ -12,6 +12,7 @@ hamburger.addEventListener("click", () => {
 });
 
 
+
 userToggle.addEventListener("click", (e) => {
     mainNav.classList.add("slide-out");
     userNav.classList.add("slide-in");

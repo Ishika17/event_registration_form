@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             showNewsletterMessage("Subscribing...", "info");
 
+            
             setTimeout(() => {
                 showNewsletterMessage(
                     "Successfully subscribed! Check your email for confirmation.",
